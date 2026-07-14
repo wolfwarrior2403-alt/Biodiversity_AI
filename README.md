@@ -67,6 +67,12 @@ pillow
 bioclip
 ```
 
+## Continuous integration
+
+This repository includes a basic GitHub Actions workflow that checks Python syntax and runs `flake8` on pushes and pull requests to `main`.
+
+Build status: ![CI](https://github.com/wolfwarrior2403-alt/Biodiversity_AI/actions/workflows/ci.yml/badge.svg)
+
 ## Contributing
 
 Suggestions, bug reports and improvements are welcome. Open an issue or submit a pull request.
