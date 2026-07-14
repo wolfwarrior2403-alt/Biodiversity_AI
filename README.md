@@ -73,6 +73,25 @@ This repository includes a basic GitHub Actions workflow that checks Python synt
 
 Build status: ![CI](https://github.com/wolfwarrior2403-alt/Biodiversity_AI/actions/workflows/ci.yml/badge.svg)
 
+## Docker image
+
+You can build and run the application in Docker locally:
+
+```bash
+# Build
+docker build -t your-dockerhub-username/biodiversity_ai:latest .
+
+# Run
+docker run -p 8501:8501 your-dockerhub-username/biodiversity_ai:latest
+```
+
+The repository also includes a GitHub Actions workflow that can publish a Docker image to Docker Hub. To enable it, add the following repository secrets:
+
+- `DOCKERHUB_USERNAME` — your Docker Hub username
+- `DOCKERHUB_TOKEN` — a Docker Hub access token or password
+
+The workflow will push images to `<DOCKERHUB_USERNAME>/biodiversity_ai:latest` and a SHA-tagged image.
+
 ## Contributing
 
 Suggestions, bug reports and improvements are welcome. Open an issue or submit a pull request.
